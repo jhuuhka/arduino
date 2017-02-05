@@ -1,5 +1,5 @@
 /*
-  Blink
+  Blank
   Turns on an LED on for one second, then off for one second, repeatedly.
 
   Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO 
