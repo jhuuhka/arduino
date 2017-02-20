@@ -32,12 +32,13 @@ void setup() {
   
   WiFi.config(ip, gateway, subnet, dns);
   WiFi.begin(ssid, password);
-  Serial.println("");
-
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
+    writeLed(250, 250, 250);
     delay(500);
     Serial.print(".");
+    writeLed(125, 125, 125);
+    delay(500);
   }
   Serial.println("");
   Serial.print("Connected to ");
@@ -47,6 +48,7 @@ void setup() {
   server.on("/", handleRoot);
   server.begin();
   testLed();
+  writeLed(HIGH, HIGH, LOW);
 }
 
 void loop() {
@@ -89,14 +91,18 @@ void testLed() {
   writeLed(HIGH, HIGH, HIGH);
   delay(250);
   writeLed(LOW, LOW, LOW);
-  delay(250);
 }
 
 void writeLed(int rValue, int gValue, int bValue) {
+  if (rValue == HIGH) rValue = 255;
+  if (gValue == HIGH) gValue = 255;
+  if (bValue == HIGH) bValue = 255;
+  
+  
   //debugLed(rValue, gValue, bValue);
-  digitalWrite(rLed, rValue);
-  digitalWrite(gLed, gValue);
-  digitalWrite(bLed, bValue);
+  analogWrite(rLed, rValue);
+  analogWrite(gLed, gValue);
+  analogWrite(bLed, bValue);
 }
 
 void debugLed(int rValue, int gValue, int bValue) {
