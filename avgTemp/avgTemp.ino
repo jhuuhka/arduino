@@ -30,8 +30,8 @@ void loop() {
   lcd.setCursor(14, 0);
   lcd.print(samples - loopCounter);
   temperatureArray[loopCounter] = temperature;
-  if(loopCounter == samples - 1) {    
-    getAvgTemperature();    
+  if (loopCounter == samples - 1) {
+    getAvgTemperature();
     updateLcd();
     updateSerial();
     loopCounter = 0;
@@ -39,7 +39,7 @@ void loop() {
     loopCounter++;
   }
   delay(1000);
-  
+
 }
 
 void updateLcd() {
@@ -50,37 +50,37 @@ void updateLcd() {
   lcd.print("Lo");
   lcd.setCursor(10, 0);
   lcd.print("Hi");
-  
+
   lcd.setCursor(0, 1);
   lcd.print(avgTemperature);
   lcd.setCursor(6, 1);
   lcd.print(allLow);
   lcd.setCursor(10, 1);
   lcd.print(allHigh);
-  
+
 }
 
 void updateSerial() {
-    Serial.print("Average: ");
-    Serial.print(avgTemperature);
-    Serial.print(". Low: ");
-    Serial.print(allLow);
-    Serial.print(". High: ");
-    Serial.print(" ");
-    Serial.print(allHigh);
-    Serial.print(".");
-    Serial.println();
+  Serial.print("Average: ");
+  Serial.print(avgTemperature);
+  Serial.print(". Low: ");
+  Serial.print(allLow);
+  Serial.print(". High: ");
+  Serial.print(" ");
+  Serial.print(allHigh);
+  Serial.print(".");
+  Serial.println();
 }
 
 int getAvgTemperature() {
   int sum = 0;
-  for (int i=0; i<10; i++) {
+  for (int i = 0; i < 10; i++) {
     int singleTemp = temperatureArray[i];
-    sum += singleTemp;    
+    sum += singleTemp;
   }
   avgTemperature = sum / 10;
   allLow = min(allLow, avgTemperature);
-  allHigh= max(allHigh, avgTemperature);
+  allHigh = max(allHigh, avgTemperature);
 }
 
 
