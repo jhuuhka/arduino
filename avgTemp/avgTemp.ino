@@ -4,8 +4,8 @@
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 int temperaturePin = A0;
-int samples = 100;
-int temperatureArray[100];
+int samples = 10;
+int temperatureArray[10];
 int loopCounter = 0;
 int allLow = 100;
 int allHigh = 0;
@@ -27,8 +27,16 @@ void setup() {
 
 void loop() {
   int temperature = getTemperature();
+  if (avgTemperature != 0 && temperature > avgTemperature + 20) {
+    Serial.print(" ignored");
+    temperature = avgTemperature;
+  }
   lcd.setCursor(14, 0);
+  if (samples - loopCounter < 10) {
+    lcd.print(" ");
+  }
   lcd.print(samples - loopCounter);
+
   temperatureArray[loopCounter] = temperature;
   if (loopCounter == samples - 1) {
     getAvgTemperature();
@@ -88,8 +96,8 @@ int getTemperature() {
   int sensorVal = analogRead(temperaturePin);
   float voltage = (sensorVal / 1024.0) * 5.0;
   float temperature = (voltage - .5) * 100;
-  //Serial.print(temperature);
-  //Serial.print(" ");
+  Serial.print(temperature);
+  Serial.print(" ");
   return temperature;
 }
 
