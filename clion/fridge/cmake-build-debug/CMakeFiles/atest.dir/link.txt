@@ -1,0 +1,1 @@
+/home/jhuuhka/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++   -g   CMakeFiles/atest.dir/home/jhuuhka/atest/src/Demo.cpp.o  -o atest -rdynamic 
