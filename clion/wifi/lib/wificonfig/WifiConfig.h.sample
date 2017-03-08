@@ -1,0 +1,22 @@
+/* WifiConfig constants
+*/
+#ifndef WifiConfig_H
+#define WifiConfig_H
+
+
+const char* ssid = "..";
+const char* password = "..";
+const char* otaPassword = "..";
+const char* www_username = "..";
+const char* www_password = "..";
+
+
+IPAddress mini1Ip(192, 168, 8, 193);
+IPAddress d1Ip(192, 168, 8, 194);
+IPAddress gatewayIp(192, 168, 8, 1);
+IPAddress dnsIp(192, 168, 8, 1);
+IPAddress subnetIp(255, 255, 0, 0);
+
+
+
+#endif
