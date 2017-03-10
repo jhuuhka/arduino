@@ -1,1 +1,0 @@
-/home/jhuuhka/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++   -g   CMakeFiles/dht.dir/src/DhtTest.cpp.o  -o dht -rdynamic 
