@@ -1,0 +1,1 @@
+/home/jhuuhka/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++   -g   CMakeFiles/wifi.dir/home/jhuuhka/Arduino/git/clion/wifi/src/Wifi.cpp.o  -o wifi -rdynamic 
