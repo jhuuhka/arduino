@@ -1,0 +1,1 @@
+/home/jhuuhka/.platformio/packages/toolchain-atmelavr/bin/avr-g++   -g   CMakeFiles/spidht.dir/src/init.cpp.o  -o spidht -rdynamic 
