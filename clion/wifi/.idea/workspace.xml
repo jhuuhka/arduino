@@ -151,7 +151,6 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/platformio.ini" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.PLATFORMIO_UPLOAD">
@@ -230,12 +229,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1435919971910</updated>
-      <workItem from="1489003744512" duration="425000" />
+      <workItem from="1489003744512" duration="1166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425000" />
+    <option name="totallyTimeSpent" value="1166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="466" y="50" width="1400" height="1000" extended-state="0" />
