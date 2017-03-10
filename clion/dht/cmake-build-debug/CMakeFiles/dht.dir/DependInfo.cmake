@@ -26,7 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/jhuuhka/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"
   "/home/jhuuhka/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip/include"
   "/home/jhuuhka/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"
-  "/home/jhuuhka/.platformio/packages/framework-arduinoespressif8266/variants/d1_mini"
+  "/home/jhuuhka/.platformio/packages/framework-arduinoespressif8266/variants/d1"
   "../.piolibdeps/Adafruit Unified Sensor_ID31"
   "../.piolibdeps/DHT sensor library_ID19"
   "../src"
