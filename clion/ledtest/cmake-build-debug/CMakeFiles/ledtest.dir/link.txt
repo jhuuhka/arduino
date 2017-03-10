@@ -1,1 +1,0 @@
-/home/jhuuhka/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++   -g   CMakeFiles/ledtest.dir/src/init.cpp.o  -o ledtest -rdynamic 
