@@ -17,6 +17,8 @@ uint8_t dBlue[] = {1, 1, 0};
 uint8_t dYellow[] = {0, 0, 1};
 uint8_t dPurple[] = {0, 1, 0};
 uint8_t dAqua[] = {1 , 0, 0};
+uint8_t dWhite[] = {0 , 0, 0};
+uint8_t dBlack[] = {1 , 1, 1};
 
 
 void setup() {
@@ -38,6 +40,10 @@ void loop() {
     setColor(dPurple);
     delay(1000);
     setColor(dAqua);
+    delay(1000);
+    setColor(dWhite);
+    delay(1000);
+    setColor(dBlack);
     delay(1000);
 }
 
