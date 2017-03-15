@@ -1,1 +1,0 @@
-/home/jhuuhka/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++   -g   CMakeFiles/iicoled.dir/home/jhuuhka/Arduino/git/clion/iicoled/src/i2cOled.cpp.o  -o iicoled -rdynamic 
