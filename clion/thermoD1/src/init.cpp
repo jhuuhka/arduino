@@ -53,8 +53,8 @@ uint8_t  dAqua[] = {1 , 0, 0};
 uint8_t  dWhite[] = {0 , 0, 0};
 uint8_t dBlack[] = {1 , 1, 1};
 
-const char* ssid = "sikssikssiks";
-const char* password = "K155AK01RA";
+const char* ssid = "..";
+const char* password = "..";
 const char* otaPassword = "..";
 const char* www_username = "..";
 const char* www_password = "..";
