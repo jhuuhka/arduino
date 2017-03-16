@@ -21,8 +21,11 @@ Humidity: <span id="hum"></span>
 <table id="dhtTable">
   <tr>    
     <th>Date</th>
-    <th>Temperature</td>
-    <th>Humidity</td>
+    <th>Uptime</th>
+    <th>Temperature</th>
+    <th>Humidity</th>
+    <th>Status</th>
+    <th>Beep</th>
   </tr>
 </table>
 
@@ -37,6 +40,9 @@ function myFunction() {
 	        myObj = JSON.parse(this.responseText);
 	        temp = myObj.temperature;
 		hum = myObj.humidity;
+		uptime = myObj.uptime;
+		stat = myObj.status;
+		beep = myObj.beepCount;
 		document.getElementById("temp").innerHTML = temp; 
 		document.getElementById("hum").innerHTML = hum;;
 		var table = document.getElementById("dhtTable");
@@ -44,21 +50,27 @@ function myFunction() {
 		var cell1 = row.insertCell(0);    		
 		var cell2 = row.insertCell(1);
     		var cell3 = row.insertCell(2);
+    		var cell4 = row.insertCell(3);
+    		var cell5 = row.insertCell(4);
+    		var cell6 = row.insertCell(5);
 		cell1.innerHTML = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");    		
-		cell2.innerHTML = temp;
-    		cell3.innerHTML = hum;
+		cell2.innerHTML = uptime;
+		cell3.innerHTML = temp;
+    		cell4.innerHTML = hum;
+		cell5.innerHTML = stat;
+		cell6.innerHTML = beep;
 		if (table.rows.length > 10) {		
 			table.deleteRow(10);
 		}	
 	    }
 	};
-xmlhttp.open("GET", "http://192.168.8.194", true);
+xmlhttp.open("GET", "http://192.168.8.193", true);
 xmlhttp.send();
 
 
 }
+setInterval(myFunction, 60000);
 </script>
 
 </body>
 </html>
-
